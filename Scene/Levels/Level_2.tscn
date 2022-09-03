@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Material/smat__Marble.tres" type="Material" id=1]
+[ext_resource path="res://Scene/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Texture/marble.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Home.tscn" type="PackedScene" id=4]
+
+[node name="Level_2" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+material = ExtResource( 1 )
+position = Vector2( -1.52588e-05, 4.00002 )
+scale = Vector2( 2.25, 1.39062 )
+z_index = -1000
+texture = ExtResource( 3 )
+
+[node name="Wall" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -384 )
+scale = Vector2( 18, 1 )
+
+[node name="Wall2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 384 )
+scale = Vector2( 18, 1 )
+
+[node name="Wall3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -600, 0 )
+scale = Vector2( 1, 13 )
+
+[node name="Wall4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 600, 0 )
+scale = Vector2( 1, 13 )
+
+[node name="Home" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, -24 )
